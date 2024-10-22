@@ -19,7 +19,7 @@ class PlayState(BaseState):
         pass
 
     def Enter(self, params):
-        entity_conf = ENTITY_DEFS['player']
+        entity_conf = ENTITY_DEFS['player'] # let it be, just config
         self.player = Player(entity_conf)
         self.dungeon = Dungeon(self.player)
 
