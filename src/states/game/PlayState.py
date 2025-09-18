@@ -26,12 +26,12 @@ class PlayState(BaseState):
         self.player.state_machine = StateMachine()
         self.player.state_machine.SetScreen(pygame.display.get_surface())
         self.player.state_machine.SetStates({
-            'walk': PlayerWalkState(self.player, self.dungeon),
+            'walk': PlayerWalkState(self.player, self.dungeon),    # Define animation state
             'idle': PlayerIdleState(self.player),
             'swing_sword': PlayerAttackState(self.player, self.dungeon),
         })
 
-        self.player.ChangeState('walk')
+        self.player.ChangeState('walk') # initial state
 
     def update(self, dt, events):
         for event in events:

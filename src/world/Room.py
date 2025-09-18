@@ -56,11 +56,11 @@ class Room:
                 # Wall Corner
                 if x == 1 and y == 1:
                     id = TILE_TOP_LEFT_CORNER
-                elif x ==1 and y == self.height:
+                elif x == 1 and y == self.height:
                     id = TILE_BOTTOM_LEFT_CORNER
                 elif x == self.width and y == 1:
                     id = TILE_TOP_RIGHT_CORNER
-                elif x == 1 and y == self.height:
+                elif x == self.width and y == self.height:    ### fix to x == self.width
                     id = TILE_BOTTOM_RIGHT_CORNER
 
                 #Wall, Floor

@@ -1,10 +1,11 @@
 import random
 
+from src.EntityBase import EntityBase
 from src.states.BaseState import BaseState
 from src.constants import *
 
 class EntityWalkState(BaseState):
-    def __init__(self, entity, dungeon=None):
+    def __init__(self, entity: EntityBase, dungeon=None):
         self.entity = entity
         self.entity.ChangeAnimation('down')
         self.dungeon = dungeon
